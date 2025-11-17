@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Interview System</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <style>
+    body {
+      background: #0b1021;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+    }
+    .step { 
+      max-width: 900px; 
+      margin: auto; 
+      padding: 25px; 
+      background: #10172b; 
+      border-radius: 12px;
+      box-shadow: 0px 4px 18px rgba(0,0,0,0.45);
+    }
+    h2 { margin-bottom: 12px; }
+    select, button {
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: none;
+      margin-right: 10px;
+      font-size: 16px;
+    }
+    button {
+      background: #3a63ff;
+      color: white;
+      cursor: pointer;
+    }
+    button:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    #aiStream {
+      width: 100%;
+      height: 240px;
+      background: #0e152b;
+      border-radius: 10px;
+      padding: 10px;
+      overflow-y: auto;
+      margin-bottom: 15px;
+      border: 1px solid #22345c;
+    }
+    video {
+      border-radius: 10px;
+      border: 2px solid #314278;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- STEP 1 ---------------------------------------- -->
+  <div id="step1" class="step">
+    <h2>Step 1 — Select Topic</h2>
+    <p>Please choose a topic to begin your interview.</p>
+
+    <select id="topic">
+      <option>Product Designer</option>
+      <option>PCB Designer</option>
+      <option>Firmware / Software Developer (Embedded)</option>
+      <option>Integration Engineer</option>
+      <option>Domain Expert & V&V Engineer</option>
+      <option>Mechanical Designer</option>
+      <option>Procurement Specialist</option>
+    </select>
+
+    <button id="step1NextBtn">Next</button>
+  </div>
+
+  <!-- STEP 2 ---------------------------------------- -->
+  <div id="step2" class="step" style="display:none;">
+    <h2>Step 2 — Intro Video</h2>
+    <p>Watch the intro video fully to begin.</p>
+
+    <video id="introVideo" width="700" controls playsinline>
+      <source id="introSrc" src="/static/videos/product_designer_intro.mp4" type="video/mp4">
+    </video>
+
+    <br><br>
+
+    <button id="step2BackBtn">Back</button>
+    <button id="startBtn" disabled>Start Interview</button>
+  </div>
+
+  <!-- STEP 3 ---------------------------------------- -->
+  <div id="step3" class="step" style="display:none;">
+    <h2>Step 3 — AI Interview</h2>
+
+    <div id="aiStream"></div>
+    <audio id="aiAudio" autoplay></audio>
+
+    <br>
+
+    <button id="step3BackBtn">Back</button>
+    <button id="endBtn" disabled>End Interview</button>
+    <button id="goToAnalysisBtn" disabled>Go to Analysis</button>
+  </div>
+
+  <!-- STEP 4 ---------------------------------------- -->
+  <div id="step4" class="step" style="display:none;">
+    <h2>Step 4 — Interview Analysis</h2>
+
+    <div id="scoreSummary"></div>
+    <div id="bucketSection"></div>
+    <div id="analysisTableWrapper"></div>
+    <div id="analysisSections"></div>
+
+    <pre id="rawAnalysis"></pre>
+
+    <br>
+
+    <button id="backToInterviewBtn">Back to Interview</button>
+    <button id="analyzeBtn">Analyze Session</button>
+    <span id="analyzeStatus"></span>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

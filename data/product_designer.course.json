@@ -1,0 +1,342 @@
+{
+  "metadata": {
+    "topic": "Product Designer / Product Development Engineer",
+    "language": "en",
+    "strict_topic_lock": true,
+    "version": "v1.0",
+    "source": "GyanNidhi – Product Designer Job Role page"
+  },
+  "opening_policy": {
+    "ai_initiates": true,
+    "first_turn": {
+      "style": "concise_greeting_then_first_question",
+      "requirements": [
+        "English only",
+        "Max 16 spoken words",
+        "State topic briefly, then ask directly"
+      ]
+    }
+  },
+  "interview_style": {
+    "tone": "supportive_industry_mentor",
+    "question_length_words": { "min": 10, "max": 18 },
+    "one_question_at_a_time": true,
+    "define_acronyms_spelled": ["ADC", "DAC", "MCU", "UART", "SPI", "I2C", "BLE", "RF", "BOM", "ECO", "SI" ],
+    "forbidden_phrases": ["Perfect!", "Excellent answer!", "Great!", "Awesome!", "Amazing!"],
+    "positive_feedback_rule": "Acknowledge briefly only if specifically correct; otherwise probe or correct using context."
+  },
+  "coverage_plan": {
+    "policy": "breadth_then_depth_without_repetition",
+    "min_competencies_to_cover": 8,
+    "max_turns": 12,
+    "coverage_priority": [
+      "product_lifecycle_and_requirements",
+      "signal_chain_design",
+      "mcu_selection_and_peripherals",
+      "sensing_and_actuation",
+      "data_conversion_adc_dac",
+      "level_translation_and_logic",
+      "communications_wired_wireless",
+      "signal_types_and_integrity",
+      "antenna_and_rf_interfaces",
+      "validation_and_lab_measurements",
+      "docs_bom_architecture",
+      "cross_functional_collaboration"
+    ],
+    "repeat_rule": "Do not repeat a subskill unless prior answer was weak or incorrect.",
+    "off_topic_rule": "If the answer is off-topic, steer back to the nearest competency present here."
+  },
+  "job_context": {
+    "industry_categories": [
+      "Electronics", "Embedded Systems", "EV", "Energy",
+      "Biomedical", "Defense", "Railway", "IoT", "Consumer Electronics"
+    ],
+    "designations": [
+      "Product Development Engineer",
+      "Product Definition Engineer",
+      "Product Architect (Embedded Systems)",
+      "System Design Engineer",
+      "Functional Block Owner"
+    ],
+    "career_path": [
+      "Embedded Designer",
+      "Subsystem Architect",
+      "System Architect",
+      "Product Engineering Manager",
+      "R&D Head"
+    ]
+  },
+  "competencies": [
+    {
+      "id": "product_lifecycle_and_requirements",
+      "name": "Embedded Product Lifecycle & Requirement Breakdown",
+      "responsibilities": [
+        "Participate in new embedded product development stages",
+        "Analyze use-cases and derive electronic functions",
+        "Create specifications and success criteria"
+      ],
+      "subskills": [
+        "lifecycle_stages_and_gate_reviews",
+        "requirement_breakdown_and_traceability",
+        "signal_classification_inputs_processing_outputs"
+      ],
+      "red_flags": [
+        "No linkage from use-case to measurable electronic requirement",
+        "Vague success criteria"
+      ]
+    },
+    {
+      "id": "signal_chain_design",
+      "name": "Block-Level Signal Chain Design",
+      "responsibilities": [
+        "Design analog/digital signal conditioning blocks",
+        "Define end-to-end functional blocks with constraints"
+      ],
+      "subskills": [
+        "amplifier_filter_selection",
+        "gain_noise_bandwidth_tradeoffs",
+        "saturation_headroom_and_dynamic_range"
+      ],
+      "red_flags": [
+        "Chooses blocks without constraints",
+        "No noise or bandwidth reasoning"
+      ]
+    },
+    {
+      "id": "mcu_selection_and_peripherals",
+      "name": "Microcontroller Selection & Peripherals",
+      "responsibilities": [
+        "Select MCU and define peripheral needs",
+        "Pin multiplexing and interface planning"
+      ],
+      "subskills": [
+        "mcu_selection_criteria_memory_clocks_power",
+        "peripheral_budget_uart_spi_i2c_pwm_adc_dac",
+        "pinmux_conflicts_and_board_constraints"
+      ],
+      "red_flags": [
+        "Ignores timing/latency/peripheral conflicts",
+        "No estimation of throughput"
+      ]
+    },
+    {
+      "id": "sensing_and_actuation",
+      "name": "Sensor/Actuator Integration",
+      "responsibilities": [
+        "Sensor signal processing",
+        "Driver/interface choices for actuators"
+      ],
+      "subskills": [
+        "sensor_interface_levels_biasing",
+        "amplifier_front_ends_and_filtering",
+        "driver_selection_current_voltage_protection"
+      ],
+      "red_flags": [
+        "No protection or reference stability",
+        "No calibration path"
+      ]
+    },
+    {
+      "id": "data_conversion_adc_dac",
+      "name": "Data Conversion (ADC/DAC)",
+      "responsibilities": [
+        "Sampling, quantization, full-scale mapping",
+        "Waveform synthesis with DAC"
+      ],
+      "subskills": [
+        "adc_sampling_rate_nyquist_and_anti_aliasing",
+        "resolution_quantization_enob",
+        "dac_word_to_waveform_amplitude_timing"
+      ],
+      "red_flags": [
+        "Confuses sampling rate vs resolution",
+        "No FS mapping or reference considerations"
+      ]
+    },
+    {
+      "id": "level_translation_and_logic",
+      "name": "Level Translation & Logic Compatibility",
+      "responsibilities": [
+        "Logic-level interfacing and translators",
+        "Mixed-voltage domain planning"
+      ],
+      "subskills": [
+        "logic_families_and_thresholds",
+        "voltage_shifters_and_direction_control",
+        "timing_margins_and_metastability_awareness"
+      ],
+      "red_flags": [
+        "Assumes direct connects across domains",
+        "Ignores direction control"
+      ]
+    },
+    {
+      "id": "communications_wired_wireless",
+      "name": "Communications Strategy (Wired & Wireless)",
+      "responsibilities": [
+        "Select UART/SPI/I2C",
+        "Select BLE/WiFi/RF basics and constraints"
+      ],
+      "subskills": [
+        "uart_spi_i2c_tradeoffs",
+        "ble_wifi_selection_latency_throughput_power",
+        "rf_link_budget_basics_regulatory_awareness"
+      ],
+      "red_flags": [
+        "No throughput/latency reasoning",
+        "No regulatory considerations"
+      ]
+    },
+    {
+      "id": "signal_types_and_integrity",
+      "name": "Signal Types & Integrity",
+      "responsibilities": [
+        "Single-ended vs differential mapping",
+        "Basic SI constraints in architecture"
+      ],
+      "subskills": [
+        "se_vs_diff_mapping",
+        "basic_si_constraints_length_skew_reference",
+        "connector_and_cable_considerations"
+      ],
+      "red_flags": [
+        "Randomly mixes SE/diff",
+        "No thought to reference/return"
+      ]
+    },
+    {
+      "id": "antenna_and_rf_interfaces",
+      "name": "Antenna & RF Interfaces",
+      "responsibilities": [
+        "Antenna matching and connector standards",
+        "PCB routing near antennas"
+      ],
+      "subskills": [
+        "feedline_impedance_and_matching",
+        "antenna_clearance_and_ground_keepout",
+        "connector_standard_selection"
+      ],
+      "red_flags": [
+        "Places components in antenna keepout",
+        "Ignores matching constraints"
+      ]
+    },
+    {
+      "id": "validation_and_lab_measurements",
+      "name": "Validation & Lab Measurements",
+      "responsibilities": [
+        "Define validation strategy and tests",
+        "Operate DMM, oscilloscope, signal generator and logic/power analyzers"
+      ],
+      "subskills": [
+        "validation_plan_with_acceptance_criteria",
+        "oscilloscope_waveform_interpretation",
+        "function_generator_stimulus_design",
+        "logic_power_analyzers_for_system_validation"
+      ],
+      "red_flags": [
+        "No measurable acceptance criteria",
+        "Cannot interpret waveforms"
+      ]
+    },
+    {
+      "id": "docs_bom_architecture",
+      "name": "Documentation, BOM & Architecture",
+      "responsibilities": [
+        "Architecture docs and interface specs",
+        "BOM definition and versioning (ECO)"
+      ],
+      "subskills": [
+        "structured_architecture_documents",
+        "bom_coverage_and_change_control",
+        "pinmux_and_interface_spec_alignment"
+      ],
+      "red_flags": [
+        "Uncontrolled BOM drift",
+        "No traceability between docs and design"
+      ]
+    },
+    {
+      "id": "cross_functional_collaboration",
+      "name": "Cross-Functional Collaboration & Packaging",
+      "responsibilities": [
+        "Coordinate hardware/firmware/mechanical teams",
+        "Packaging choices and ergonomic design"
+      ],
+      "subskills": [
+        "cross_functional_requirements_exchange",
+        "enclosure_constraints_and_ergonomics",
+        "integration_test_support_and_signal_tracing"
+      ],
+      "red_flags": [
+        "Works in isolation; misses mech/firmware constraints",
+        "No integration bring-up plan"
+      ]
+    }
+  ],
+  "probe_templates": [
+    { "id": "define", "pattern": "Give a brief definition of {subskill} in this product context." },
+    { "id": "why", "pattern": "Why is {subskill} important for {competency}?" },
+    { "id": "when", "pattern": "When would you apply {subskill} and what constraint guides it?" },
+    { "id": "steps", "pattern": "List key steps for {subskill}, be concise." },
+    { "id": "checks", "pattern": "What checks validate {subskill} was done correctly?" },
+    { "id": "instrument", "pattern": "Which instrument verifies {subskill} and what signal feature proves success?" },
+    { "id": "failure", "pattern": "Name one failure symptom if {subskill} is wrong and how to fix." }
+  ],
+  "follow_up_rules": {
+    "weak_answer": [
+      "Ask for one concrete example tied to the JSON competency",
+      "Narrow to a single constraint (timing, reference, level, bandwidth)",
+      "Offer one hint from the JSON then re-ask briefly"
+    ],
+    "strong_answer": [
+      "Increase depth using a different template (steps → checks → instrument)",
+      "Connect to adjacent competency (e.g., from MCU selection to pin mux tradeoffs)"
+    ],
+    "off_topic_answer": [
+      "Gently state the interview is limited to the course context and redirect to the nearest listed subskill"
+    ]
+  },
+  "evaluation_rubric": {
+    "scoring_scale": "0-10",
+    "weights": {
+      "product_lifecycle_and_requirements": 0.12,
+      "signal_chain_design": 0.12,
+      "mcu_selection_and_peripherals": 0.12,
+      "sensing_and_actuation": 0.08,
+      "data_conversion_adc_dac": 0.08,
+      "level_translation_and_logic": 0.08,
+      "communications_wired_wireless": 0.10,
+      "signal_types_and_integrity": 0.08,
+      "antenna_and_rf_interfaces": 0.07,
+      "validation_and_lab_measurements": 0.07,
+      "docs_bom_architecture": 0.04,
+      "cross_functional_collaboration": 0.04
+    },
+    "levels": {
+      "0": "Incorrect or no knowledge; contradictions with context",
+      "1": "Fragmented recall; cannot apply; major gaps",
+      "2": "Mostly correct basics; limited application; needs guidance",
+      "3": "Correct and applicable; mentions constraints and checks",
+      "4": "Confident, practical, evidence-based; connects across competencies"
+    },
+    "red_flag_penalty": 1
+  },
+  "glossary": {
+    "ADC": "Analog-to-Digital Converter",
+    "DAC": "Digital-to-Analog Converter",
+    "MCU": "Microcontroller",
+    "BOM": "Bill of Materials",
+    "ECO": "Engineering Change Order",
+    "SI": "Signal Integrity",
+    "UART": "Universal Asynchronous Receiver-Transmitter",
+    "SPI": "Serial Peripheral Interface",
+    "I2C": "Inter-Integrated Circuit",
+    "BLE": "Bluetooth Low Energy",
+    "RF": "Radio Frequency"
+  },
+  "language_policy": {
+    "allowed_language": "English",
+    "if_student_requests_other_language": "Politely decline and continue in English per course policy"
+  }
+}
